@@ -23,6 +23,7 @@ ADD_EXECUTABLE(async_client async_client.cpp)
 ADD_EXECUTABLE(async_server async_server.cpp)
 ADD_EXECUTABLE(asio_sig asio_signal.cpp)
 ADD_EXECUTABLE(asio_timer asio_timer.cpp)
+ADD_EXECUTABLE(resolve_query resolve_query.cpp)
 #添加编译可执行程序所需要的链接库、如果有多个中间用空格隔开
 #第一个参数是可执行程序名称，第二个开始是依赖库
 #在这里根据名字boost_thread去寻找libboost_thread.a文件
@@ -32,3 +33,4 @@ TARGET_LINK_LIBRARIES(async_client pthread boost_system)
 TARGET_LINK_LIBRARIES(async_server pthread boost_system)
 TARGET_LINK_LIBRARIES(asio_sig pthread boost_system)
 TARGET_LINK_LIBRARIES(asio_timer pthread boost_system)
+TARGET_LINK_LIBRARIES(resolve_query pthread boost_system)

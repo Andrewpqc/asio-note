@@ -24,6 +24,9 @@ int main() {
     while (true) {
         socket_ptr sock(new ip::tcp::socket(service));
         acc.accept(*sock);
+
+        sock->set_option(ip::tcp::socket::reuse_address(true));
+
         std::thread(std::bind(client_session, sock));
     }
 

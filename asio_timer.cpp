@@ -15,6 +15,5 @@ int main() {
 
     ios.run();
 
-
     return 0;
 }
