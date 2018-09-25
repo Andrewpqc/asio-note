@@ -7,7 +7,7 @@ using namespace boost::asio;
 
 typedef std::shared_ptr<ip::tcp::socket> socket_ptr;
 
-void client_session(socket_ptr sock) {
+void client_session(const socket_ptr& sock) {
     while (true) {
         char data[512];
         size_t len = sock->read_some(buffer(data));
